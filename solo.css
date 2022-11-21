@@ -1,0 +1,159 @@
+@font-face{font-family:'digital-clock-font';src :url("digital-7.ttf");}
+@import url(https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap);
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    display:grid;
+    place-items: center;
+}
+button{
+    margin-top:50px;
+    margin-left:40px;
+    width:50px;
+    color:white;
+    height:30px;
+    font-size:20px;
+    background-color:transparent;
+    border:1px dashed rgba(181, 171, 171, 0.507);   
+    font-family: 'digital-clock-font';
+    transition:all .5s
+}
+#reset{
+    margin-top:200px;
+    margin-left:-20px;
+    margin-right:-20px;
+    background-color:rgba(32, 143, 160, 0.278);
+    width:100px;
+    color:linen;
+    transition:all .2s;
+    border:1px solid rgba(14, 48, 53, 0.645);
+    transition:all .5s
+}
+button:hover{
+    background-color:black;
+}
+.new{
+    -webkit-text-stroke:.3px  rgba(112, 103, 103, 0.458);
+    text-shadow:0px 3px 3px rgb(197, 83, 34);
+    -webkit-text-reflect:below 1px red;
+    letter-spacing: 4px;
+    font-family:Baskervville,sans-serif;
+    color:rgba(210, 195, 30, 0.703);
+    font-size:42px;
+    text-align: center;
+    position:relative;
+    margin-top:-202px;
+    width:400px;
+    height:50px;
+    background-color:white;
+    box-shadow:0px 0px 20px bisque ;
+}
+.container{
+    display:flex;
+    justify-content: space-evenly;
+    position:relative;
+    border:50px dashed rgba(251, 242, 242, 0.829);
+    width:700px;
+    height:330px;
+    margin-top:-400px;
+    background-color:rgba(0, 0, 255, 0.31);
+    animation: blink 10s linear infinite;
+    animation-direction:alternate;
+}
+@keyframes blink{
+    0%{border-color:red;}
+    50%{border-color:orange;}
+    100%{border-color:white;}
+}
+h1{
+    -webkit-text-stroke:1px  rgb(193, 221, 206);
+    text-shadow:0px 0 2px white;
+    letter-spacing:3px;
+    color:transparent;
+    text-align:center;
+    margin-top:15px;   
+    animation:push 3s linear infinite;
+    animation-direction:alternate;
+}
+@keyframes push{
+    0%{text-shadow:0px 0 3px red;}
+    50%{text-shadow:0px 0 3px white;}
+    100%{text-shadow:0px 0 3px orange;}
+}
+input{
+    background-color: black;
+    margin:20px;
+    padding-top: 5px;
+    padding-bottom:5px;
+    padding-right: 15px;
+    text-align:right;
+    width:260px;
+    height:95px;
+    color:linen;
+    font-family: 'digital-clock-font';
+    font-size:6rem;
+    pointer-events:none;
+}
+@media(max-width:550px){
+    .new{
+        width:300px;
+        height:40px;
+        font-size:32px;
+    }
+    .container{
+        display:flex;
+        justify-content: space-evenly;
+        position:relative;
+        border:25px dashed rgba(251, 242, 242, 0.829);
+        width:380px;
+        height:270px;
+        margin-top:-450px;
+        background-color:rgba(0, 0, 255, 0.31);
+        animation: blink 10s linear infinite;
+        animation-direction:alternate;
+    }
+    .one{
+        background-color: black;
+        margin:15px;
+        padding-top: 2px;
+        padding-bottom:2px;
+        padding-right: 5px;
+        text-align:right;
+        width:160px;
+        height:45px;
+        color:linen;
+    }
+    h2{
+        font-size:3rem;
+    }
+    button{
+        margin-top:20px;
+        margin-left:25px;
+        width:30px;
+        color:white;
+        height:18px;
+        font-size:15px;
+        background-color:transparent;
+        border:1px dashed rgba(181, 171, 171, 0.507);   
+        font-family: 'digital-clock-font';
+        transition:all .5s
+    }
+    #reset{
+        margin-top:200px;
+        padding:5px 5px;
+        margin-right:-20px;
+        background-color:rgba(32, 143, 160, 0.278);
+        width:110px;
+        height:30px;
+        color:linen;
+        transition:all .2s;
+        border:1px solid rgba(14, 48, 53, 0.645);
+        transition:all .5s
+    }
+    
+}
